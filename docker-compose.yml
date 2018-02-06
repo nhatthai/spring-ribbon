@@ -1,0 +1,13 @@
+version: '2.1'
+services:
+  say-hello:
+    build: say-hello
+    image: nhatthai/say-hello
+    ports:
+      - 8090:8090
+
+  user:
+    build: user
+    image: nhatthai/user
+    ports:
+      - 8888:8888
