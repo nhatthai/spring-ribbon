@@ -10,4 +10,5 @@ say-hello:
     eureka:
       enabled: false
     listOfServers: say-hello:8090
+    # listOfServers: localhost:8090,localhost:8091
     ServerListRefreshInterval: 15000
