@@ -26,6 +26,14 @@ public class SayHelloApplication {
         return greetings.get(randomNum);
     }
 
+    @RequestMapping(value = "/hi_getall")
+    public List<String> getall() {
+        log.info("Access /getall");
+
+        List<String> greetings = Arrays.asList("Hi there", "Greetings", "Salutations");
+        return greetings;
+    }
+
     @RequestMapping(value = "/")
     public String home() {
         log.info("Access /");
