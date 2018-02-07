@@ -1,4 +1,4 @@
-# Spring Cloud and Ribbon, Feign
+# Spring Cloud: Ribbon and Feign
 Providing client-side load balancing for a microservice application using Netflix Ribbon and Netflix Feign as well.
 
 + Apply Docker Compose
