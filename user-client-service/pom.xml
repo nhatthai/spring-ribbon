@@ -30,12 +30,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!-- ribbon -->
-		<!-- <dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-ribbon</artifactId>
-		</dependency> -->
-
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-feign</artifactId>
@@ -47,6 +41,7 @@
 			<artifactId>feign-core</artifactId>
 			<version>${feign.version}</version>
 		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/io.github.openfeign/feign-ribbon -->
 		<dependency>
 			<groupId>io.github.openfeign</groupId>
