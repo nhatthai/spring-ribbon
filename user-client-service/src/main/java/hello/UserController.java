@@ -12,6 +12,7 @@ import feign.Logger;
 import feign.Client;
 import feign.codec.Decoder;
 import feign.codec.Encoder;
+import feign.ribbon.RibbonClient;
 
 import hello.UserClient;
 
@@ -22,12 +23,13 @@ class UserController {
     @Autowired
 	public UserController(
 			Decoder decoder, Encoder encoder, Client client) {
-        this.userClient = Feign.builder().client(client)
+        this.userClient = Feign.builder()
+            .client(RibbonClient.create())
             .encoder(encoder)
             .decoder(decoder)
             .target(UserClient.class, "http://say-hello");
 
-        // .client(RibbonClient.create())
+        //
         // .requestInterceptor(new BasicAuthRequestInterceptor("user", "user"))
     }
 
