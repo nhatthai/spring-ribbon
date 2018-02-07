@@ -11,3 +11,11 @@ services:
     image: nhatthai/user
     ports:
       - 8888:8888
+
+  user-client-service:
+    build: user-client-service
+    image: nhatthai/user-client-service
+    ports:
+      - 8899:8899
+    links:
+      - "say-hello"
